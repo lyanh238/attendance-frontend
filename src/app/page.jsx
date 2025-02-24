@@ -67,7 +67,7 @@ export default function FaceRecognition() {
   // Kết nối đến WebSocket
   useEffect(() => {
     socketRef.current = new WebSocket(
-    `wss://${process.env.NEXT_PUBLIC_NGROK_LINK}/ws/face-recognition`
+    `ws://localhost:8000/ws/face-recognition`
     );
 
     socketRef.current.onopen = () => {
